@@ -62,8 +62,8 @@ const App = () => {
         />
 
         <Route path="*" element={<NotFoundPage />} />
-      </Route>
-    )
+      </Route>,
+    ),
   );
 
   return <RouterProvider router={router} />;

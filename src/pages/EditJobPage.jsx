@@ -14,7 +14,7 @@ const EditJobPage = ({ updateJobSubmit }) => {
   const [salary, setSalary] = useState(job.salary);
   const [companyName, setCompanyName] = useState(job.company.name);
   const [companyDescription, setCompanyDescription] = useState(
-    job.company.description
+    job.company.description,
   );
   const [contactEmail, setContactEmail] = useState(job.company.contactEmail);
   const [contactPhone, setContactPhone] = useState(job.company.contactPhone);
@@ -22,7 +22,7 @@ const EditJobPage = ({ updateJobSubmit }) => {
   const submitForm = (e) => {
     e.preventDefault();
     const updatedJob = {
-      id: job.id,
+      id,
       title,
       type,
       location,
@@ -38,7 +38,7 @@ const EditJobPage = ({ updateJobSubmit }) => {
     try {
       updateJobSubmit(updatedJob);
       toast.success("Job Updated Successfully");
-      navigate(`/jobs/${job.id}`);
+      navigate(`/jobs/${id}`);
     } catch (error) {
       toast.error("Failed to update job");
       console.error("Update Job Error:", error);
