@@ -19,7 +19,7 @@ This project is a React-based banking website created as part of a code-along tu
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/react-banking-website.git
+    git clone https://github.com/zidvsd/react-banking-website.git
     ```
 
 2. Navigate to the project directory:
